@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelSuite" parallel="tests" thread-count="2">
+    <test name="Test1">
+        <parameter name="a" value="Sheet1!A1:B2"/>
+        <parameter name="b" value="2"/>
+        <classes>
+            <class name="org.example.Runner"/>
+        </classes>
+    </test>
+
+    <test name="Test2">
+        <parameter name="a" value="Sheet1!A3:B4"/>
+        <parameter name="b" value="4"/>
+        <classes>
+            <class name="org.example.Runner"/>
+        </classes>
+    </test>
+
+    <!--    <test name="Test3">-->
+    <!--        <parameter name="a" value="acc"/>-->
+    <!--        <classes>-->
+    <!--            <class name="org.example.Runner"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+</suite>
